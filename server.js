@@ -108,7 +108,7 @@ app.post('/signin', (req, res)=>{signin.handleSignin(req, res, db, bcrypt)});
 // register
 app.post('/register', (req, res)=>{register.handleRegister(req, res, db, bcrypt)});
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT||3000, ()=>{
 	// run after listening happening
-	console.log('app is running at port 3000')
+	console.log(`app is running at port ${process.env.PORT}`)
 });
