@@ -92,7 +92,7 @@ app.use(cors());
 // have to start over aka restart server
 // when restart, lose all the data
 app.get('/', (req, res)=>{
-	res.send(db.users)
+	res.send("it's working")
 })
 
 // this one is difficult
